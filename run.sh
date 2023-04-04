@@ -1,3 +1,4 @@
+#!/bin/(shell)
 isconnect=`ping -c 1 -q google.com >&/dev/null; echo $?` 
 if [[ $isconnect != 0 ]] 
 	then
@@ -5,9 +6,9 @@ if [[ $isconnect != 0 ]]
     	return
 fi
 
-ip_old=`cat ip.config` 
-(curl ifconfig.me && echo ) > ip.config
-ip_new=`cat ip.config`
+ip_old=`cat README.md` 
+(curl ifconfig.me && echo ) > README.md
+ip_new=`cat README.md`
 
 if [ $ip_old != $ip_new ] 
 	then
